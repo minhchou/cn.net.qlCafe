@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E77EA825-64A4-4261-9425-24984C2C96E4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QL_CAFE</RootNamespace>
+    <AssemblyName>QL_CAFE</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Excel, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Excel.1.0.0\lib\dotnet\Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAccess\Connection.cs" />
+    <Compile Include="DataAccess\SQL_tb_CongDung.cs" />
+    <Compile Include="DataAccess\SQL_tb_CTHDB.cs" />
+    <Compile Include="DataAccess\SQL_tb_CTHDN.cs" />
+    <Compile Include="DataAccess\SQL_tb_HDB.cs" />
+    <Compile Include="DataAccess\SQL_tb_HDN.cs" />
+    <Compile Include="DataAccess\SQL_tb_Khachhang.cs" />
+    <Compile Include="DataAccess\SQL_tb_Loai.cs" />
+    <Compile Include="DataAccess\SQL_tb_NCC.cs" />
+    <Compile Include="DataAccess\SQL_tb_NhanVien.cs" />
+    <Compile Include="DataAccess\SQL_tb_Que.cs" />
+    <Compile Include="DataAccess\SQL_tb_SanPham.cs" />
+    <Compile Include="DataAccess\SQL_tb_User.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\fr_ChiTietHDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\fr_ChiTietHDB.Designer.cs">
+      <DependentUpon>fr_ChiTietHDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\fr_ChiTietHDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\fr_ChiTietHDN.Designer.cs">
+      <DependentUpon>fr_ChiTietHDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\fr_CongDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\fr_CongDung.Designer.cs">
+      <DependentUpon>fr_CongDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\fr_DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\fr_DangNhap.Designer.cs">
+      <DependentUpon>fr_DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\fr_HDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\fr_HDB.Designer.cs">
+      <DependentUpon>fr_HDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\fr_HDN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\fr_HDN.Designer.cs">
+      <DependentUpon>fr_HDN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\fr_Help.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\fr_Help.Designer.cs">
+      <DependentUpon>fr_Help.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\fr_KhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\fr_KhachHang.Designer.cs">
+      <DependentUpon>fr_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\fr_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\fr_Main.Designer.cs">
+      <DependentUpon>fr_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\fr_NDL_Loai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\fr_NDL_Loai.Designer.cs">
+      <DependentUpon>fr_NDL_Loai.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\fr_NDL_NhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\fr_NDL_NhanVien.Designer.cs">
+      <DependentUpon>fr_NDL_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\Fr_NDL_QueQuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\Fr_NDL_QueQuan.Designer.cs">
+      <DependentUpon>Fr_NDL_QueQuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\fr_NDL_SanPham.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\fr_NDL_SanPham.Designer.cs">
+      <DependentUpon>fr_NDL_SanPham.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\fr_NhaCungCap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\fr_NhaCungCap.Designer.cs">
+      <DependentUpon>fr_NhaCungCap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\fr_ThongKe_HoaDonBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\fr_ThongKe_HoaDonBan.Designer.cs">
+      <DependentUpon>fr_ThongKe_HoaDonBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\fr_ThongKe_KH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\fr_ThongKe_KH.Designer.cs">
+      <DependentUpon>fr_ThongKe_KH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\fr_ThongKe_SP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\fr_ThongKe_SP.Designer.cs">
+      <DependentUpon>fr_ThongKe_SP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\fr_TK_HDB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\fr_TK_HDB.Designer.cs">
+      <DependentUpon>fr_TK_HDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main\fr_TK_SP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main\fr_TK_SP.Designer.cs">
+      <DependentUpon>fr_TK_SP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fr_Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Fr_Loading.Designer.cs">
+      <DependentUpon>Fr_Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main\Class\Class_tb_CongDung.cs" />
+    <Compile Include="Main\Class\Class_tb_CTHDB.cs" />
+    <Compile Include="Main\Class\Class_tb_CTHDN.cs" />
+    <Compile Include="Main\Class\Class_tb_HDB.cs" />
+    <Compile Include="Main\Class\Class_tb_HDN.cs" />
+    <Compile Include="Main\Class\Class_tb_Khachhang.cs" />
+    <Compile Include="Main\Class\Class_tb_Loai.cs" />
+    <Compile Include="Main\Class\Class_tb_NCC.cs" />
+    <Compile Include="Main\Class\Class_tb_NhanVien.cs" />
+    <Compile Include="Main\Class\Class_tb_Que.cs" />
+    <Compile Include="Main\Class\Class_tb_SanPham.cs" />
+    <Compile Include="Main\Class\Class_tb_User.cs" />
+    <Compile Include="Main\Process\Prc_tb_CongDung.cs" />
+    <Compile Include="Main\Process\Prc_tb_CTHDB.cs" />
+    <Compile Include="Main\Process\Prc_tb_CTHDN.cs" />
+    <Compile Include="Main\Process\Prc_tb_HDB.cs" />
+    <Compile Include="Main\Process\Prc_tb_HDN.cs" />
+    <Compile Include="Main\Process\Prc_tb_Khachhang.cs" />
+    <Compile Include="Main\Process\Prc_tb_Loai.cs" />
+    <Compile Include="Main\Process\Prc_tb_NCC.cs" />
+    <Compile Include="Main\Process\Prc_tb_NhanVien.cs" />
+    <Compile Include="Main\Process\Prc_tb_Que.cs" />
+    <Compile Include="Main\Process\Prc_tb_SanPham.cs" />
+    <Compile Include="Main\Process\Prc_tb_User.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\fr_ChiTietHDB.resx">
+      <DependentUpon>fr_ChiTietHDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\fr_ChiTietHDN.resx">
+      <DependentUpon>fr_ChiTietHDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\fr_CongDung.resx">
+      <DependentUpon>fr_CongDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\fr_DangNhap.resx">
+      <DependentUpon>fr_DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\fr_HDB.resx">
+      <DependentUpon>fr_HDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\fr_HDN.resx">
+      <DependentUpon>fr_HDN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\fr_Help.resx">
+      <DependentUpon>fr_Help.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\fr_KhachHang.resx">
+      <DependentUpon>fr_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\fr_Main.resx">
+      <DependentUpon>fr_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\fr_NDL_Loai.resx">
+      <DependentUpon>fr_NDL_Loai.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\fr_NDL_NhanVien.resx">
+      <DependentUpon>fr_NDL_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\Fr_NDL_QueQuan.resx">
+      <DependentUpon>Fr_NDL_QueQuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\fr_NDL_SanPham.resx">
+      <DependentUpon>fr_NDL_SanPham.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\fr_NhaCungCap.resx">
+      <DependentUpon>fr_NhaCungCap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\fr_ThongKe_HoaDonBan.resx">
+      <DependentUpon>fr_ThongKe_HoaDonBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\fr_ThongKe_KH.resx">
+      <DependentUpon>fr_ThongKe_KH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\fr_ThongKe_SP.resx">
+      <DependentUpon>fr_ThongKe_SP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\fr_TK_HDB.resx">
+      <DependentUpon>fr_TK_HDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main\fr_TK_SP.resx">
+      <DependentUpon>fr_TK_SP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fr_Loading.resx">
+      <DependentUpon>Fr_Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
